@@ -8,6 +8,8 @@ class EditProfileScreen extends StatefulWidget {
 class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
+    double screenwidth = MediaQuery.of(context).size.width;
+    double hei = MediaQuery.of(context).size.height * 0.25;
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -22,26 +24,23 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     end: Alignment.bottomLeft,
                     colors: [
                       Color(0xFF515678),
-                      Color(0xFFB454865)//#515678
+                      Color(0xFFB454865) //#515678
                     ],
                   ),
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                child: Stack(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8.0, top: 8),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.arrow_back_ios_outlined,
-                            color: Colors.white,
-                          ),
-                        ],
+                    Positioned(
+                      top: 15,
+                      left: 8,
+                      child: Icon(
+                        Icons.arrow_back_ios_outlined,
+                        color: Colors.white,
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    Positioned(
+                      top: 40,
+                      left: 30,
                       child: Row(
                         children: [
                           CircleAvatar(
@@ -74,9 +73,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.05,
-                    ),
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Row(
@@ -92,9 +88,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                           ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
+                
               ),
               Padding(
                 padding:

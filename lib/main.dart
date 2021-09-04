@@ -22,10 +22,10 @@ class MyApp extends StatelessWidget {
       //   primarySwatch: Colors.blue,
       // ),
        //home: NavDrawerScreen(),
-       //home: EditProfileScreen(),
+       home: EditProfileScreen(),
        //home: ReportDetails(),
        //home: HistoryScreen(),
-       home: UserProfile1Screen(),
+       //home: UserProfile1Screen(),
        //home: UserProfile2Screen(),
     );
   }
