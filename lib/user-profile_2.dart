@@ -103,8 +103,14 @@ class _UserProfile2ScreenState extends State<UserProfile2Screen> {
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.8,
                 height: 110,
-                //padding: const EdgeInsets.symmetric(horizontal: 10),
-                color: Colors.white,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
+                  ),
+                  color: Colors.white,
+                ),
+                //color: Colors.white,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Row(
@@ -225,7 +231,7 @@ class _UserProfile2ScreenState extends State<UserProfile2Screen> {
               ),
             ),
             Positioned(
-              top: MediaQuery.of(context).size.height * 0.4,
+              top: MediaQuery.of(context).size.height * 0.35,
               left: 25,
               right: 25,
               bottom: 0,

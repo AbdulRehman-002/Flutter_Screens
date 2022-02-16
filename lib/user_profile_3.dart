@@ -9,15 +9,15 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
     double screenwidth = MediaQuery.of(context).size.width;
-    double hei = MediaQuery.of(context).size.height * 0.25;
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
               Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 0.25,
+                width: screenwidth,
+                height: height * 0.20,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topRight,
@@ -91,11 +91,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     ),
                   ],
                 ),
-                
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 25.0, vertical: 20),
+                padding: const EdgeInsets.only(
+                    left: 20.0, right: 40.0, top: 20, bottom: 20),
                 child: Column(
                   children: [
                     ListTile(
